@@ -45,7 +45,7 @@ use liquid::ParserBuilder;
 /// for working with maps.
 use std::collections::HashMap;
 
-/// Importing the "SiteContext" structure.
+/// Importing the "SiteContext" structure
 /// to use as context for templates
 /// written in the Liquid templating
 /// language.

@@ -95,7 +95,7 @@ use super::utils::produce_complex_path;
 /// of the "MandyConfig" structure.
 use super::processors::parse_yml_config;
 
-/// Importing the function find files
+/// Importing the function to find files
 /// with the provided ending in the provided
 /// directory.
 use super::utils::find_files_with_ending;

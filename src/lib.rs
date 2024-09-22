@@ -15,7 +15,7 @@ pub use modules::err::*;
 /// that contains Mandy's CLI.
 pub use modules::cli::*;
 
-/// Re-exorting the module
+/// Re-exporting the module
 /// that contains Mandy's
 /// entities.
 pub use modules::units::*;

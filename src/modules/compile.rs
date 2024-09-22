@@ -162,7 +162,7 @@ pub fn compile_project(dir: &String) -> Result<(), MandyErr>{
     }
 }
 
-/// Compiles all content files in a Mandy project written in Markdown
+/// Compiles all content files in a Mandy project written in Markdown,
 /// that a Mandy project has. Returns a "Result" type with an empty closure.
 pub fn compile_markdown_files(dir: &String) -> Result<(), MandyErr>{
     let data: SiteInfo = match gather_project_data(dir){

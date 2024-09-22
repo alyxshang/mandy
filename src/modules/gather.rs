@@ -441,7 +441,7 @@ pub fn retrieve_partials(dir: &String) -> Result<HashMap<String, String>, MandyE
     }
 }
 
-/// A function that gathers all the information on a Mandy project that it can.
+/// A function that gathers all the information on a Mandy project.
 /// If the operation is successful, an instance of the "SiteInfo" structure 
 /// is returned. If the operation fails, an error is returned.
 pub fn gather_project_data(dir: &String) -> Result<SiteInfo, MandyErr> {

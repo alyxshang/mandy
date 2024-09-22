@@ -1,0 +1,38 @@
+on: [push]
+env:
+  MANDY_ENV: "production"
+name: Mandy CI
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          
+      - name: "Build Mandy."
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release
+      
+      - name: "Clone my personal website."
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          depth: 1
+          branch: main
+          owner: alyxshang
+          repository: alyxshang.github.io
+          
+      - name: "Compile a Mandy site."
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -c alyxshang.github.io
+
+      - name: "Reset a Mandy site."
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -r alyxshang.github.io

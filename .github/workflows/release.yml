@@ -1,0 +1,54 @@
+on:
+  push:
+    tags:
+    - '*'
+env:
+  MANDY_ENV: "production"
+name: Mandy Release CI
+jobs:
+    release:
+        name: ${{ matrix.target }}
+        runs-on: ${{ matrix.os }}
+        strategy:
+          fail-fast: true
+          matrix:
+            include:
+              - os: ubuntu-latest
+                target: x86_64-unknown-linux-gnu
+              - os: windows-latest
+                target: x86_64-pc-windows-msvc
+              - os: macos-latest
+                target: x86_64-apple-darwin
+
+        steps:
+
+            - uses: actions/checkout@v2
+            - uses: actions-rs/toolchain@v1
+              with:
+                toolchain: stable
+
+            - name: "Get current version."
+              id: get_version
+              uses: SebRollen/toml-action@v1.0.2
+              with:
+                file: mandy-bin/Cargo.toml
+                field: package.version
+                        
+            - name: "Build Mandy."
+              uses: actions-rs/cargo@v1
+              with:
+                command: build
+                args: --release
+            
+            - name: "Rename binary Windows."
+              if: ${{ matrix.os == 'windows-latest' }}
+              run: move target/release/mandy.exe target/release/mandy-${{ steps.get_version.outputs.value }}-${{ matrix.target }}.exe
+            
+            - name: "Rename binary Nix."
+              if: ${{ matrix.os != 'windows-latest' }}
+              run: mv target/release/mandy target/release/mandy-${{ steps.get_version.outputs.value }}-${{ matrix.target }}
+            
+            - uses: actions/upload-artifact@v3
+              with:
+                name: mandy-${{ steps.get_version.outputs.value }}-${{ matrix.target }}
+                path: target/release/mandy-${{ steps.get_version.outputs.value }}-${{ matrix.target }}*

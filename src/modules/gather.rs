@@ -296,7 +296,7 @@ pub fn read_data_files(dir: &String) -> Result<Option<HashMap<String,UserDataFil
     }
 }
 
-/// Finds all the markdown files in a Mandy project and parses the content
+/// Finds all the Markdown files in a Mandy project and parses the content
 /// of these files. If this operation fails, an error is returned. A "Result" type
 /// is returned.
 pub fn find_markdown_files(
@@ -340,7 +340,7 @@ pub fn find_markdown_files(
     Ok(result)
 }
 
-/// Finds all the markdown files in a given Mandy project and the given directories containing
+/// Finds all the Markdown files in a given Mandy project and the given directories containing
 /// loop content and parses the content of these files. If this operation fails, an error is returned. A "Result" type
 /// is returned.
 pub fn find_loop_content_files(

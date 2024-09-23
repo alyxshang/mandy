@@ -39,9 +39,9 @@ mandy version
 - To print usage information, you can run either of these three commands:
 
 ```bash
-mandy -v
+mandy -h
 # OR
-mandy --version
+mandy --help
 # OR
-mandy version
+mandy help
 ```

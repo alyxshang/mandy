@@ -1,7 +1,7 @@
 # MANDY :sparkles: :fire:
 
 ![Mandy CI](https://github.com/alyxshang/mandy/actions/workflows/rust.yml/badge.svg)
-![Release CI](https://github.com/alyxshang/mandy/actions/workflows/rust.yml/badge.svg)
+![Release CI](https://github.com/alyxshang/mandy/actions/workflows/release.yml/badge.svg)
 
 ***A light and fast static-site generator. :sparkles: :fire:***
 

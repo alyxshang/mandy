@@ -1,10 +1,10 @@
+name: Mandy Release CI
 on:
   push:
     tags:
     - '*'
 env:
   MANDY_ENV: "production"
-name: Mandy Release CI
 jobs:
     release:
         name: ${{ matrix.target }}

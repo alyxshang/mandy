@@ -1,6 +1,6 @@
 # INSTALLATION :inbox_tray:
 
-For the installation of Mandy you have two options: i) You can download a compiled binary for your platform from this [repository's releases section](https://github.com/alyxshang/mandy/releases) or ii) install Mandy via Cargo, Rust's package manager. The latter option requires you to have the Rust toolchain installed and to run the following command from a terminal session:
+To install Mandy, you need to first install the Rust toolchain. This is required to get access to the `cargo` command, the command for Rust's package manager. The `cargo` command allows you to then install Mandy from this repository's releases. To install Mandy, run the following command from a terminal session:
 
 ```bash
 cargo install --git https://github.com/alyxshang/mandy.git --tag v.0.1.0

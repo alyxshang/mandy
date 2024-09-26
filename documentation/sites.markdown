@@ -111,7 +111,7 @@ The frontmatter of this file contains three variables, more, however, can be add
 
 ## Routing
 
-Routing in Mandy is controlled via the `baseurl` template variable. The value of this variable is set to either of the values stored in the `dev_url` or `prod_url` variables saved in the configuration file. Which one of these values is used depends upon which variant the `MANDY_ENV` environment variable has been set to. This environment variable can be set to either `production` or `development`.
+Routing in Mandy is controlled via the `baseurl` template variable. The value of this variable is set to either of the values stored in the `dev_url` or `prod_url` variables saved in the configuration file. Which one of these values is used, depends upon which variant the `MANDY_ENV` environment variable has been set to. This environment variable can be set to either `production` or `development`. Additionally, each `page` namespace has an `url` attribute. This attribute can be used to create links between different pages.
 
 ## Links
 

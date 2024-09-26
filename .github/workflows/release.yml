@@ -1,8 +1,5 @@
 name: Mandy Release CI
-on:
-  push:
-    tags:
-    - '*'
+on: [push]
 env:
   MANDY_ENV: "production"
 jobs:

@@ -104,7 +104,7 @@ date: "2024/09/22"
 
 # Hello World!
 
-This a content file to say "Hello World!".
+This is a content file to say "Hello World!".
 ```
 
 The frontmatter of this file contains three variables, more, however, can be added. These variables are: `layout`, `title`, and `date`. The `layout` variable declares that this content file would like to use the layout called `page` located at the path `layouts/page.liquid` at the root of a Mandy project. The second and third variables are not strictly needed by Mandy, unless they are called upon in a layout via the `page.params` namespace. These three variables are called frontmatter and are enclosed in three dashes. Anything below the second set of three dashes is content written in Markdown.

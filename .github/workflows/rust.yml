@@ -1,0 +1,41 @@
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - uses: actions/checkout@v6
+
+      - name: "Run unit tests."
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+      
+      - name: "Run Clippy."
+        uses: actions-rs/cargo@v1
+        with:
+          command: clippy
+
+      - name: "Make a \"release\" build."
+        uses: actions-rs/cargo@v1
+        with:
+          command: build 
+          args: --release
+
+      - name: "Testing the \"build\" command."
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --build sample
+
+      - name: "Testing the \"clean\" command."
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --clean sample
+
+      - name: "Testing the \"test\" command."
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --test sample

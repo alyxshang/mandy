@@ -1,0 +1,22 @@
+(^-^)
+# sample.ejirai
+"layout" >~< "page"
+"title" >~< "Page Title"
+"description" >~< "A simple about page."
+(^-^)
+<3 Heading 1
+# This is a comment.
+This is normal text with a very long sentence.
+This is a sentence containing *italic* and _bold text_.
+This is a link to an image >($[alt][https://alyxshang.boo])<.
+This text contains some _bold text_.
+This text contains some *italic text*.
+
+<3<3 Heading 2
+
+This paragraph contains some _nested *italic* text_.
+And this is a >(%[link to my site][link to my site][https://alyxshang.boo])<.
+
+~ This is item one of an unordered list.
+~ This is item two of an unordered list.
+(^-^)

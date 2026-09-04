@@ -1,0 +1,9 @@
+# General.
+.DS_Store
+
+# Mandy.
+/target
+Cargo.lock
+
+# Mandy project.
+/sample/dist

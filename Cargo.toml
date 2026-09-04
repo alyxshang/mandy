@@ -1,0 +1,26 @@
+[package]
+name = "mandy"
+version = "0.1.0"
+edition = "2024"
+author = ["Alyx Shang <alyxshang@alyxshang.boo>"]
+license-file = "LICENSE"
+readme = "README.markdown"
+description= "A fast and light static-site generator."
+homepage = "https://github.com/alyxshang/mandy"
+repository = "https://github.com/alyxshang/mandy"
+
+[dependencies]
+walkdir = "2.5.0"
+fs_extra = "1.3.0"
+tinytemplate = "1.2.1"
+serde = { version = "1.0.228", features = ["derive"] }
+yue = { git = "https://github.com/alyxshang/yue", tag = "v.0.1.0" }
+jmu = { git = "https://github.com/alyxshang/jmu", tag = "v.0.1.0" }
+jirai = { git = "https://github.com/alyxshang/jirai", tag = "v.0.1.0", features = ["ejirai"] }
+
+[profile.release]
+lto = true
+strip = true
+panic = "abort"
+opt-level = "z"
+codegen-units = 1

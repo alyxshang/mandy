@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <title>{page.data.title}</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <body>
+  <h1>{page.data.title}</h1>
+  <p>{page.data.description}</p>
+  {{ for post in site.iter_content.posts }}
+   <h2>{post.data.title}</h2>
+   <p>{post.data.description}</p>
+   <p><a href="{post.url}">Read</a></p>
+  {{ endfor }}
+  <p>LINKS</p>
+  {{ for item in data.links.items }}
+   <p><a href="{item.url}">{item.name}</a></p>
+  {{ endfor }}
+ </body>
+</html>

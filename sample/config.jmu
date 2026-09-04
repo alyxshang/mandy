@@ -1,0 +1,3 @@
+"dist_dir" >~< "dist"
+"copy_files" >~< ["assets"]
+"iter_content" >~< ["posts"]

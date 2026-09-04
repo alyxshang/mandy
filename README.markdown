@@ -34,7 +34,7 @@ The previous version of Mandy from two years ago had 4000 lines of code and an e
 ### Version 0.1.0
 
 - Initial release.
-- Initial upload to Forgejo.
+- Initial upload to GitHub.
 
 ## NOTE
 

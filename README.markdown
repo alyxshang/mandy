@@ -36,6 +36,16 @@ The previous version of Mandy from two years ago had 4000 lines of code and an e
 - Initial release.
 - Initial upload to GitHub.
 
+### Version 0.2.0
+
+- [ ] Got rid of the `walkdir` crate.
+- [ ] Got rid of the `fs_extra` crate.
+- [ ] Templates can now be split into components.
+- [ ] Added a configuration option to turn on SEO.
+- [ ] Added the ability to have rendering secrets.
+- [ ] Added a configuration option to be clanker-friendly or not.
+- [ ] Replaced the `tinytemplate` engine with my own engine, `yokai`.
+
 ## NOTE
 
 - *Mandy* by *Alyx Shang*.

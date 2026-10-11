@@ -41,6 +41,7 @@ The previous version of Mandy from two years ago had 4000 lines of code and an e
 - [ ] Multi-threaded site-generation.
 - [ ] Got rid of the `walkdir` crate.
 - [ ] Got rid of the `fs_extra` crate.
+- [ ] More explicit error-handling.
 - [ ] Templates can now be split into components.
 - [ ] Added a configuration option to turn on SEO.
 - [ ] Added the ability to have rendering secrets.

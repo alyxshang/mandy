@@ -38,6 +38,7 @@ The previous version of Mandy from two years ago had 4000 lines of code and an e
 
 ### Version 0.2.0
 
+- [ ] Multi-threaded site-generation.
 - [ ] Got rid of the `walkdir` crate.
 - [ ] Got rid of the `fs_extra` crate.
 - [ ] Templates can now be split into components.
